@@ -1,0 +1,29 @@
+nav {
+    height: 120px;
+    width: 100%;
+    padding: 1.5em;
+    background-color: #4056A1;
+    color: #FFFFFF;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav span {
+    font-size: 50px;
+    font-family: 'Bungee', sans-serif;
+}
+
+.nav-tweet {
+    font-family: 'Source Sans Pro', sans-serif;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-tweet i {
+    color: red;
+}

@@ -1,0 +1,30 @@
+.new-tweet {
+    margin-top: 30px;
+}
+
+.new-tweet form div {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Bungee', sans-serif;
+}
+
+.new-tweet form button {
+    color: white;
+    background-color: #4056A1;
+    border: 3px solid #4056A1;
+}
+
+#tweet-text {
+    border-bottom: 4px solid black;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    outline: none;
+    resize: none;
+    width: 100%;
+    background-color: transparent;
+}
+
+#tweet-text::placeholder {
+    font-weight: 900;
+}
