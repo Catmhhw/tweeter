@@ -25,6 +25,59 @@
     background-color: transparent;
 }
 
-#tweet-text::placeholder {
+.new-tweet label {
     font-weight: 900;
+}
+
+
+
+.tweet-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tweet-header span {
+    display: flex;
+    align-items: center;
+}
+
+.tweet-content{
+    margin: 1em;
+    font-weight: bold;
+}
+
+hr {
+    border-bottom: solid;
+}
+
+.posted-tweet {
+    border-style: solid;
+}
+
+.posted-tweet:hover {
+    border-style: solid;
+    box-shadow: 10px 10px 5px #4057a14a;
+}
+
+.article-margin {
+    margin: 2%;
+}
+
+footer {
+    margin-top: 7px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons i {
+    color: #4056A1;
+}
+
+.icons i:hover {
+    color: #e4941c;
+}
+
+.username {
+    color: #4057a14a;
 }

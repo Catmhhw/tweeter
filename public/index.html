@@ -24,6 +24,7 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
@@ -37,11 +38,11 @@
       </div>
     </nav>
 
-    <header>
+    <header class="page-header">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
-      <br>
+      <!-- <br> -->
       <div>
           <h2>Your Name</h2>
       </div>
@@ -53,15 +54,37 @@
 
       <section class="new-tweet">
         <form method="post" action="/tweets">
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
           <div>
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
+          <br><br>
         </form>
+
+        <article class="posted-tweet">
+          <div class="article-margin">
+            <header class="tweet-header">
+              <span><img class="avatar" src="https://i.imgur.com/nlhLi3I.png"> &nbsp;&nbsp; Name</span>
+              <h3 class="username">@user</h3>
+            </header>
+            <section class="tweet-content">
+              Hello World
+            </section>
+            <hr>
+            <footer>
+              <span>10 days ago</span>
+              <div class="icons">
+                <i class="fa-solid fa-flag"></i>
+                <i class="fa-solid fa-retweet"></i>
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </footer>
+          </div>
+        </article>
+
       </section>
-      
-      
     </main>
   </body>
 </html>
