@@ -81,3 +81,11 @@ footer {
 .username {
     color: #4057a14a;
 }
+
+
+[id^="error"] {
+    font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    color: red;
+    margin-bottom: 1%;
+}
