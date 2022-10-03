@@ -35,7 +35,7 @@ const createTweetElement = (data) => {
             </footer>
           </div>
     </article>`);
-        return $tweet
+        return $tweet;
  }
 
  const safeHTML = function (str) {
@@ -45,11 +45,11 @@ const createTweetElement = (data) => {
 };
 
 const hideErrorMessage = () => {
-  $("#error-no-message").hide()
-  $("#error-long-message").hide()
+  $("#error-no-message").hide();
+  $("#error-long-message").hide();
 }
 
-hideErrorMessage()
+hideErrorMessage();
 
 $("#tweet-form").submit(function(event) {
     event.preventDefault();
@@ -73,15 +73,15 @@ $("#tweet-form").submit(function(event) {
       url: "/tweets",
       data,
       success: function(){
-        alert("Form sucessfully submitted.")
+        alert("Form sucessfully submitted.");
       },
       error: function(){
-        alert("Form not submitted")
+        alert("Form not submitted");
       }
      })
     .done(function(){
       loadTweets();
-        console.log("success")
+        console.log("success");
     })
 
 })
@@ -90,7 +90,7 @@ $("#tweet-form").submit(function(event) {
 const loadTweets = () => {
   $.ajax({ method: "GET", url : "/tweets"})
   .done(function(newPost){
-    renderTweets(newPost)
+    renderTweets(newPost);
   })
 }
 
