@@ -21,7 +21,6 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 /*
@@ -30,6 +29,31 @@ body {
 
  main {
   background-color: #f4f1ec;
-  width: 90%;
+  width: 100%;
   align-content: center;
+  padding-right: 20px;
+  padding-left: 20px;
  }
+
+/* DESKTOP STYLES*/
+@media only screen and (min-width: 1024px) {
+    .screensize-styling {
+        display: flex;
+        margin-top: 120px;
+        margin-left: 40px;
+        margin-bottom: 40px;
+        width: 97%;
+    } 
+
+    .page-header {
+      margin-right: 90px;
+      margin-top: 35px;
+    }
+
+    .container {
+      width: 220%;
+    }
+
+
+}
+    
