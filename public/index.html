@@ -12,15 +12,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
 
-
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -38,6 +39,7 @@
       </div>
     </nav>
 
+    <div class="screensize-styling">
     <header class="page-header">
       <div>
           <img src="/images/profile-hex.png"> 
@@ -50,10 +52,23 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-
-
       <section class="new-tweet">
-        <form method="post" action="/tweets">
+        <form id="tweet-form" method="post" action="/tweets">
+
+          <div id="error-long-message">
+            <i class="fa-solid fa-circle-exclamation"> 
+              &nbsp; Message is too long. &nbsp;
+              <i class="fa-solid fa-circle-exclamation"></i>
+            </i>
+          </div>
+
+          <div id="error-no-message">
+            <i class="fa-solid fa-circle-exclamation"> 
+              &nbsp; Please input something. &nbsp;
+              <i class="fa-solid fa-circle-exclamation"></i>
+            </i>
+          </div>
+          
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div>
@@ -63,28 +78,11 @@
           <br><br>
         </form>
 
-        <article class="posted-tweet">
-          <div class="article-margin">
-            <header class="tweet-header">
-              <span><img class="avatar" src="https://i.imgur.com/nlhLi3I.png"> &nbsp;&nbsp; Name</span>
-              <h3 class="username">@user</h3>
-            </header>
-            <section class="tweet-content">
-              Hello World
-            </section>
-            <hr>
-            <footer>
-              <span>10 days ago</span>
-              <div class="icons">
-                <i class="fa-solid fa-flag"></i>
-                <i class="fa-solid fa-retweet"></i>
-                <i class="fa-solid fa-heart"></i>
-              </div>
-            </footer>
-          </div>
-        </article>
+        <article class="tweets-container"></article>
 
       </section>
     </main>
+    </div>
+    
   </body>
 </html>
