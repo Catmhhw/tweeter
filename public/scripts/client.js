@@ -8,6 +8,7 @@ $(document).ready(function() {
 
 const renderTweets = function($tweets) {
   $('.tweets-container').html('')
+  $tweets.sort((a, b) => b.created_at - a.created_at)
   for (const key in $tweets) {
     let tweet = createTweetElement($tweets[key]);
     $('.tweets-container').append(tweet);
@@ -72,6 +73,7 @@ $("#tweet-form").submit(function(event) {
       method: "POST",
       url: "/tweets",
       data,
+      order: "DESC",
       success: function(){
         alert("Form sucessfully submitted.");
       },
@@ -84,6 +86,8 @@ $("#tweet-form").submit(function(event) {
         console.log("success");
     })
 
+    this.reset();
+    $(".counter").text(140);
 })
 
 
