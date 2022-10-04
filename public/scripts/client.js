@@ -7,11 +7,11 @@
 $(document).ready(function() {
 
   const renderTweets = function($tweets) {
-    $('.tweets-container').html('')
-    $tweets.sort((a, b) => b.created_at - a.created_at)
+    $('.tweets-container').html('')   //replaces the content with new content
+    $tweets.sort((a, b) => b.created_at - a.created_at)   //sorts posted tweets from newest to oldest
     for (const key in $tweets) {
       let tweet = createTweetElement($tweets[key]);
-      $('.tweets-container').append(tweet);
+      $('.tweets-container').append(tweet);  
     }
   }
 
@@ -46,11 +46,11 @@ $(document).ready(function() {
   };
 
   const hideErrorMessage = () => {
-    $("#error-no-message").hide();
+    $("#error-no-message").hide();    
     $("#error-long-message").hide();
   }
 
-  hideErrorMessage();
+  hideErrorMessage();   //hides the error messages
 
   $("#tweet-form").submit(function(event) {
       event.preventDefault();
@@ -58,10 +58,10 @@ $(document).ready(function() {
 
       const message = $("textarea#tweet-text").val();
 
-      hideErrorMessage();
+      hideErrorMessage();  //hides/resets the error messages after submission
 
       if (!message) {
-        $("#error-no-message").fadeIn();
+        $("#error-no-message").fadeIn();    //shows the error messages if error occurs
         return;
       }
       if (message.length > 140) {
@@ -86,8 +86,8 @@ $(document).ready(function() {
           console.log("success");
       })
 
-      this.reset();
-      $(".counter").text(140);
+      this.reset();   //clears and resets the tweet form after submitting tweet
+      $(".counter").text(140);    //resets the character counter for the tweet form
   })
 
 
